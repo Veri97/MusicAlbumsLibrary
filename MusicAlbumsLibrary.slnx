@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="src/MusicAlbumsLibrary.Api/MusicAlbumsLibrary.Api.csproj" Id="f87872b5-7894-404c-85cf-374d80fe4448" />
+  <Project Path="src/MusicAlbumsLibrary.Application/MusicAlbumsLibrary.Application.csproj" Id="f4d9b361-8eb2-4a8e-ad3e-5ebcf9c41fb1" />
+  <Project Path="src/MusicAlbumsLibrary.Core/MusicAlbumsLibrary.Core.csproj" Id="2eda93e0-8694-47d4-89c6-13a2a0ffebbe" />
+  <Project Path="src/MusicAlbumsLibrary.Infrastructure/MusicAlbumsLibrary.Infrastructure.csproj" Id="5ad8f45e-3281-4fb5-b739-57cfd932c167" />
+  <Project Path="tests/MusicAlbumsLibrary.IntegrationTests/MusicAlbumsLibrary.IntegrationTests.csproj" Id="7ef04ee8-0f97-4e1c-84ab-950c158bc38a" />
+  <Project Path="tests/MusicAlbumsLibrary.UnitTests/MusicAlbumsLibrary.UnitTests.csproj" Id="ded9421e-3dbe-45da-a8f0-244df8dd7745" />
+</Solution>
