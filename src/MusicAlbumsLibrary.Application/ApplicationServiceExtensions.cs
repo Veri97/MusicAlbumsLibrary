@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MusicAlbumsLibrary.Application.Abstractions.Features.Albums;
 using MusicAlbumsLibrary.Application.Abstractions.Features.Libraries;
 using MusicAlbumsLibrary.Application.Abstractions.Features.Users;
+using MusicAlbumsLibrary.Application.Features.Albums;
 using MusicAlbumsLibrary.Application.Features.Libraries;
 using MusicAlbumsLibrary.Application.Features.Users;
 
@@ -13,6 +15,7 @@ public static class ApplicationServiceExtensions
     {
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<ILibraryService, LibraryService>();
+        services.AddScoped<IAlbumsService, AlbumService>();
         return services;
     }
 }
