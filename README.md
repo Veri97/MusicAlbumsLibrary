@@ -15,3 +15,22 @@ To start the database service container, navigate at the root directory of the p
 - After database container is up and running, you can build and run the project (MusicAlbumsLibrary.Api) from the IDE of your choice or you can use the following commands in the command line:  ` dotnet run `  or  ` dotnet watch run `
 
 - The API runs on [*https://localhost:7282/*](https://localhost:7282/). I have configured Swagger UI for the API endpoints [*https://localhost:7282/swagger/index.html*](https://localhost:7282/swagger/index.html)
+
+
+## Architecture
+
+The solution follows Clean Architecture design. 
+The Core/Domain layer does not have dependencies on other layers. Application layer depends only on Core/Domain layer. Infrastructure layer depends on Application layer. The API project wires everything together.
+
+` MusicAlbumsLibrary.Core `   contains entities and repository interfaces
+` MusicAlbumsLibrary.Application `    contains services for feature implementation, custom exceptions, abstractions/contracts
+` MusicAlbumsLibrary.Infrastructure `    handles external concerns: database configuration, third-party api http clients
+` MusicAlbumsLibrary.Api `    the entry point of the application. It contains controllers, api models, custom middlewares
+
+
+## Notes
+
+What I would do next in order to have a better solution:
+- Add more unit and integration tests, to include most of the services and api endpoints
+- Add api models request validations
+- Add exception handling, retry and timeout configurations for the third-party client providers
