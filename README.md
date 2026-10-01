@@ -23,14 +23,17 @@ The solution follows Clean Architecture design.
 The Core/Domain layer does not have dependencies on other layers. Application layer depends only on Core/Domain layer. Infrastructure layer depends on Application layer. The API project wires everything together.
 
 ` MusicAlbumsLibrary.Core `   contains entities and repository interfaces
+
 ` MusicAlbumsLibrary.Application `    contains services for feature implementation, custom exceptions, abstractions/contracts
+
 ` MusicAlbumsLibrary.Infrastructure `    handles external concerns: database configuration, third-party api http clients
+
 ` MusicAlbumsLibrary.Api `    the entry point of the application. It contains controllers, api models, custom middlewares
 
 
 ## Notes
 
-What I would do next in order to have a better solution:
+What I would do next:
 - Add more unit and integration tests, to include most of the services and api endpoints
 - Add api models request validations
-- Add exception handling, retry and timeout configurations for the third-party client providers
+- Add retry and timeout configurations for the third-party client providers
